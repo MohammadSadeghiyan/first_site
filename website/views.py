@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 def index(request):
-    return HttpResponse('HOME_PAGE')
+    return render(request,"website/index.html")
 def about(request):
-    return HttpResponse("contact")
+    return render(request,"website/about.html")
 def contact(request):
-    return JsonResponse({'name':'ali'})
+    return render(request,'website/contact.html')
 
